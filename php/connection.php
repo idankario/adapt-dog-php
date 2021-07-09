@@ -19,7 +19,7 @@
 		$profile_nav=
 		'<div id="profile"class="dropdown mt-3 ">
         	<a href="#" class="dropdown-toggle"  data-bs-toggle="dropdown" aria-expanded="false">
-        		<img src='.$UserImage.' alt='.$user_name.' title='.$user_name.' class="rounded-circle">
+        		<img src='.$UserImage.' alt="'.$user_name.'" title="'.$user_name.'" class="rounded-circle">
         	</a>
 			<ul  class="dropdown-menu" aria-labelledby="navbarDropdown">
 				<li><a class="dropdown-item" href="#">Edit</a></li>
@@ -31,7 +31,7 @@
 		$navUser='<a href="meeting.php"><i></i>Metting Pet</a>';
 	}else
 		$profile_nav=
-		'<div id="profile" mt-3" >
+		'<div id="profile">
 			<a href="signIn_signUp.php" >
 				<img src='.$UserImage.' alt="profile" title="profile" class="pt-2 rounded-circle">
 			</a>

@@ -54,11 +54,12 @@ nav a{
   color: #111;
   font-weight: bold;
   font-size: 20px;
-  
 }
+
 nav i{
     margin-left: 20px;
 }
+
 .navIcon a:first-child i{
   background-image: url("../images/icon1.png");
 }
@@ -77,6 +78,7 @@ nav i{
 }
 nav{
   background-color: #C6C6F7;
+  padding:20px;
 }
 .navbar-collapse a{
   display: block;
@@ -367,7 +369,6 @@ footer section:nth-child(2){
     background-image: url("../images/Google.png"); 
 }
 
-
 /*-----------------------------*/
 /*button*/
 /*-----------------------------*/
@@ -379,10 +380,6 @@ button:not(.content button){
 	border: 0;
 	border-radius: 5px;
 }
-
-
-
-
 
 .container1 {
   position: relative;
@@ -508,7 +505,6 @@ button:not(.content button){
 }
 
 /* ANIMATION */
-
 .title {
   font-size: 2.2rem;
   color: #444;
@@ -707,7 +703,6 @@ button:not(.content button){
   }
 }
 
-
 /*-----------------------------*/
 /* tablet&desktop form */
 /*-----------------------------*/
@@ -744,7 +739,7 @@ button:not(.content button){
   }
   .slide__text{
     top: 40%;
-}
+  }
 }
 /*-----------------------------*/
 /* tablet&phone area */

@@ -1,9 +1,9 @@
-
 <?php
     if($UserId)
     { 
-        $isAdmin=("Admin"==$UserRole);
-        
+        $isAdmin=0;
+        if(("Admin"==$UserRole))
+            $isAdmin=1;
         $query = "SELECT al.id as id,al.price as price,DATE_FORMAT(al.date_meeting, '%m-%d-%Y') as datemeeting ,
                 al.time_meeting as time_meeting,
                 d.dog_name as dog_name,d.gender as gender,d.image_big as img,d.size as size,
@@ -17,7 +17,6 @@
         $metting = mysqli_query($connection, $query);
         if(!($metting)) 
             die("DB query failed.");
-
     }else{
         header('Location: signIn_signUp.php'); 
     }

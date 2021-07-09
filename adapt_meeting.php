@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
 		<link rel="icon" href="images/adapt.png">
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- Bootstrap CSS -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">	<link rel="stylesheet"  href="./css/style.css" type="text/css" media="all">
@@ -40,12 +40,11 @@
 				echo '<img class="rounded-circle" alt='.$name.' title='.$name.' src='.$row['image_big'].'>';
 			?>
 		</section>
-		
 		<form action="#" method="post" class="main-form requires-validation">
 			<h2 class="text-center"><?php echo$name; ?></h2>
 			<!-- Date -->
 			<div class="col-9">
-				<label type="text" class="form-label" >Date</label>
+				<label type="text" >Date</label>
 				<input type="text"  name="Date" id="datepicker" value=<?php echo $Date;?> class="form-control" required>
 				<p class="invalid-feedback">Only two words with one space</p>
 				<p class="valid-feedback">Looks good!</p>
@@ -61,14 +60,14 @@
 			<div class='col-9 mt-3'>
 				  <label>Price</label>
 				  <div class='radio-container'>
-					<input checked='' id='female' name='price' type='radio' value='female'>
+					<input checked='' id='price' name='price' type='radio' value='female'>
 					<label for='price'>200Nis</label>
 				</div>
 			</div>
 			<input type="hidden" name="DogId" value= <?php echo $DogId;?> >
 			<input type="hidden" name="State" value="Set">
 			<section class="justify-content-center mt-5">
-				<button  type="button "><i class="fas fa-paw " aria-hidden="true"></i>
+				<button type="button"><i class="fas fa-paw " aria-hidden="true"></i>
 					<?php if($id_meeting) echo 'Update'; else echo'Adapt me'; $UserId;?> 
 				</button>
 			</section>
