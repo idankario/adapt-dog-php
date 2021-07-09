@@ -25,7 +25,7 @@
 		</header>	
 		<?php echo $profile_nav;?>
 		<div class="collapse navbar-collapse navIcon"  id="navbarText" >
-			<a  href="#"><i></i> Our Home</a>
+			<a  href="#" id="currentWeb"><i></i> Our Home</a>
 			<a href="adaptDog.php"><i></i>Adapt Me</a>
 			<a href="#"><i></i>Donate Us</a>
 			<?php echo $navUser;?>

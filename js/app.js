@@ -8,6 +8,3 @@ $(()=> {
       $('.dropdown-menu').removeClass('dropdown-menu-end')
     });
 });
-
-  
-  

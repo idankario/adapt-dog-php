@@ -28,7 +28,7 @@
 			<a  href="index.php"><i></i> Our Home</a>
 			<a href="adaptDog.php"><i></i>Adapt Me</a>
 			<a href="#"><i></i>Donate Us</a>
-			<?php echo $navUser;?>
+			<?php  if($navUser)echo'<a href="#" id="currentWeb"><i></i>Metting Pet</a>';?>
 			<?php echo $navAdmin;?>
 		</div> 
   	</nav>
@@ -84,7 +84,6 @@
 			<a href="#"></a>
 		</section>
 	</footer>
-	
 	<script src="https://kit.fontawesome.com/64d58efce2.js"></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>

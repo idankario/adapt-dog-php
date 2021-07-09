@@ -28,7 +28,7 @@
 		<?php echo $profile_nav;?>
 		<div class="collapse navbar-collapse navIcon"  id="navbarText" >
 			<a  href="index.php"><i></i> Our Home</a>
-			<a href="#"><i></i>Adapt Me</a>
+			<a href="#" id="currentWeb"><i></i>Adapt Me</a>
 			<a href="#"><i></i>Donate Us</a>
 			<?php echo $navUser;?>
 			<?php echo $navAdmin;?>

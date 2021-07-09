@@ -29,7 +29,7 @@
 			<a href="adaptDog.php"><i></i>Adapt Me</a>
 			<a href="#"><i></i>Donate Us</a>
 			<?php echo $navUser;?>
-			<a href="#"><i></i>Add Pet</a>
+			<a href="#" id="currentWeb"><i></i>Add Pet</a>
 		</div> 
   	</nav>
 	<h1 class='text-center'>--Create a new dog--</h1>
