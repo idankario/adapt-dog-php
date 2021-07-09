@@ -12,8 +12,9 @@
                 FROM Adapter_list_220  al
                 INNER JOIN dogs_220 d ON d.dog_id = al.dog_id  
                 INNER JOIN users_220 u ON u.user_id = al.user_id          
-                where al.user_id=".$UserId." OR ".$isAdmin;
+                where al.user_id=".$UserId." OR ".$isAdmin." AND al.status_meeting='process'";
         // echo $query;
+    
         $metting = mysqli_query($connection, $query);
         if(!($metting)) 
             die("DB query failed.");
