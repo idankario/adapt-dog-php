@@ -1,0 +1,26 @@
+{
+	"slider":[
+		{
+			"h2": "WELCOME TO ADAPT JOY",
+			"p": "Pets are your family",
+			"href": "#",
+			"a": "Our Service",
+			"image": "./images/dog.jpg"
+		},
+		{
+			"h2": "WE LOVE PET",
+			"p": "We offer all the best quality products for your best friend.",
+			"href": "#",
+			"a": "Our Blog",
+			"image": "./images/dog1.jpg"
+		},
+		{
+			"h2": "AMAZING SERVICES",
+			"p": "We offer the best for your friend.",
+			"href": "#",
+			"a": "About US",
+			"image": "./images/dog2.jpg"
+		}
+	]
+}
+
