@@ -67,7 +67,7 @@
 			<input type="hidden" name="DogId" value= <?php echo $DogId;?> >
 			<input type="hidden" name="State" value="Set">
 			<section class="justify-content-center mt-5">
-				<button type="button"><i class="fas fa-paw " aria-hidden="true"></i>
+				<button type="submit"><i class="fas fa-paw " aria-hidden="true"></i>
 					<?php if($id_meeting) echo 'Update'; else echo'Adapt me'; $UserId;?> 
 				</button>
 			</section>

@@ -61,10 +61,15 @@
 							<p>At time: '.(date('g:ia', strtotime($row['time_meeting']))).'</p>
 						</div>
 					</div>
-					<div class="w-75 m-3 text-center">
-						<button onclick=location.href="adapt_meeting.php?DogId='.$row['dog_id'].'&id='.$row['id'].'&date_meeting='.$row['datemeeting'].'&time_meeting='.$row['time_meeting'].'" class="m-2" type="button"><i class="fas fa-pen"></i> Edit</button>
-						<button onclick=location.href="adapt_meeting.php?State=Delete&id='.$row['id'].'" type="button"><i class="far fa-trash-alt"></i> Delete</button>
-					</div>
+					<div class="w-75 m-3 text-center">';
+						if($UserRole=='Admin')
+							echo'<button onclick=location.href="adapt_meeting.php?State=Complete&id='.$row['id'].'" type="button"><i class="fas fa-pen"></i>Complete</button>
+							<button onclick=location.href="adapt_meeting.php?State=Cancel&id='.$row['id'].'" type="button"><i class="fas fa-pen"></i>Cancel</button>';
+						else
+							echo'<button onclick=location.href="adapt_meeting.php?DogId='.$row['dog_id'].'&id='.$row['id'].'&date_meeting='.$row['datemeeting'].'&time_meeting='.$row['time_meeting'].'" class="m-2" type="button"><i class="fas fa-pen"></i> Edit</button>
+							<button onclick=location.href="adapt_meeting.php?State=Delete&id='.$row['id'].'" type="button"><i class="far fa-trash-alt"></i> Delete</button>';
+						
+						echo'</div>
             	</article>';
             }	
 		?>

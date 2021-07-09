@@ -4,32 +4,35 @@
   $State_set=$_POST["State"]?? null;
   $id_meeting=$_GET["id"]?? null;   
   if(!$UserId)
-    header('signIn_signUp.php'); 
-  if($State||$State_set){   
-    if($State=='Delete'&&$id_meeting){
+    header('signIn_signUp.php');  
+  if($State||$State_set){  
+    if($State=='Delete'&&$id_meeting)
       $query = "DELETE FROM Adapter_list_220 WHERE id='$id_meeting'";
-      $result = mysqli_query($connection, $query);
-      if(!$result) 
-        die("DB query failed to delete");
-      header('Location: meeting.php'); 
+    elseif($State=='Complete'&&$id_meeting)
+      $query = "Update Adapter_list_220 SET status_meeting='Complete' WHERE id='$id_meeting'";
+    elseif($State=='Cancel'&&$id_meeting)
+      $query = "Update Adapter_list_220 SET status_meeting='Cancel' WHERE id='$id_meeting'";
+    else
+    {
+      $Date= $_POST["Date"]?? null;
+      $Time=$_POST["Time"]?? null;
+      $price=$_POST["price"]?? null;
+      $DogId=$_POST["DogId"]?? null;
+      if($Date&&$Time&&$price&&$UserId&&$DogId){ 
+      
+        $newDate = date("Y-m-d", strtotime($Date));
+        if($id_meeting)
+          $query = "Update Adapter_list_220 set 
+                    dog_id='$DogId', date_meeting='$newDate', time_meeting='$Time', price='$price' where id='$id_meeting'";
+        else
+          $query= "insert into Adapter_list_220(user_id,dog_id,date_meeting,time_meeting,price)
+                values('$UserId',' $DogId','$newDate','$Time','$price')";
+      }
     }
-    $Date= $_POST["Date"]?? null;
-    $Time=$_POST["Time"]?? null;
-    $price=$_POST["price"]?? null;
-    $DogId=$_POST["DogId"]?? null;
-    if($Date&&$Time&&$price&&$UserId&&$DogId){ 
-      $newDate = date("Y-m-d", strtotime($Date));
-      if($id_meeting)
-        $query = "Update Adapter_list_220 set 
-                  dog_id='$DogId', date_meeting='$newDate', time_meeting='$Time', price='$price' where id='$id_meeting'";
-      else
-        $query= "insert into Adapter_list_220(user_id,dog_id,date_meeting,time_meeting,price)
-              values('$UserId',' $DogId','$newDate','$Time','$price')";
-      $result = mysqli_query($connection, $query);
-      if(!$result) 
-        die("DB query failed1");
-      header('Location: meeting.php'); 
-    }
+    $result = mysqli_query($connection, $query);
+    if(!$result) 
+      die("DB query failed");
+    header('Location: meeting.php'); 
   }else{
     $DogId=$_GET["DogId"]?? null;
     if($DogId)
