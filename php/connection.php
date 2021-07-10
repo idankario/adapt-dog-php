@@ -28,7 +28,7 @@
       	</div>';
 		if($UserRole=='Admin')
 			$navAdmin='<a href="createNewPet.php"><i></i>Add Pet</a>';
-		$navUser='<a href="meeting.php"><i></i>Metting Pet</a>';
+		$navUser='<a href="meeting.php"><i></i>Meetting Pet</a>';
 	}else
 		$profile_nav=
 		'<div id="profile">

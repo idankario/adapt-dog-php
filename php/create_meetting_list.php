@@ -14,11 +14,11 @@
                 INNER JOIN users_220 u ON u.user_id = al.user_id          
                 where al.user_id=".$UserId." OR ".$isAdmin." AND al.status_meeting='process'
                 ORDER BY time_meeting , datemeeting DESC";
-        // echo $query;
-    
-        $metting = mysqli_query($connection, $query);
-        if(!($metting)) 
+        $meetting = mysqli_query($connection, $query);
+        if(!($meetting)) 
             die("DB query failed.");
+        if (mysqli_num_rows($meetting)==0)
+            header('Location: adapt_meeting.php'); 
     }else{
         header('Location: signIn_signUp.php'); 
     }

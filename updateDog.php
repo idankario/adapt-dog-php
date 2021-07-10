@@ -37,8 +37,8 @@
 		}
 		else{
 			$Parameters='?DogId='.$DogId.'&page=adapt_meeting.php';
-			$AdaptMetting=' onclick=location.href="signIn_signUp.php'.$Parameters.'DogId='.$DogId.'"';
-			$button='<button'.$AdaptMetting.' type="button"><i class="fas fa-paw"></i>adapt</button>';
+			$AdaptMeetting=' onclick=location.href="signIn_signUp.php'.$Parameters.'DogId='.$DogId.'"';
+			$button='<button'.$AdaptMeetting.' type="button"><i class="fas fa-paw"></i>adapt</button>';
 		}
 	?>
 </head>

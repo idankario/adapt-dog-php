@@ -10,7 +10,7 @@
 	<title>Edit Dog</title>
 	<?php
 		include 'php/connection.php';
-		include 'php/create_metting_list.php';
+		include 'php/create_meetting_list.php';
 	?>
 </head>
 <body >
@@ -28,7 +28,7 @@
 			<a  href="index.php"><i></i> Our Home</a>
 			<a href="adaptDog.php"><i></i>Adapt Me</a>
 			<a href="#"><i></i>Donate Us</a>
-			<?php  if($navUser)echo'<a href="#" id="currentWeb"><i></i>Metting Pet</a>';?>
+			<?php  if($navUser)echo'<a href="#" id="currentWeb"><i></i>Meetting Pet</a>';?>
 			<?php echo $navAdmin;?>
 		</div> 
   	</nav>
@@ -38,17 +38,18 @@
 			echo'<h1 class="mb-5">Hello '.$user['name'].'</h1>';
 		?>	
         <article class="d-flex flex-center align-items-center flex-row flex-wrap">		
-		<?php
-            foreach ($metting as $key => $row) {
-                $name= $row['dog_name'];	
+		<?php	
+		
+            foreach ($meetting as $key => $row) {
+                $name= $row['dog_name']??null;
 				$detalis=null;
 				$phnoe="";
 				if($row['phone'])
 					$phnoe='<p>phone: '.$row['phone'].'</p>';
 				if($isAdmin)
-					$detalis='<h5 >Metting with: '.$row['user_name'].'</h5>
+					$detalis='<h5 >Meetting with: '.$row['user_name'].'</h5>
 					<p>email: '.$row['email'].'</p>'
-					.$phnoe;
+					.$phnoe;	
             echo'<article class="d-inline flex-center align-items-center text-center text-dark m-3">'.$detalis.'
 					<div class="d-flex flex-wrap ">
 						<img alt="'.$name.'" title="'.$name.'" src="'.$row['img'].'">
