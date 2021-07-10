@@ -57,8 +57,8 @@
 			<a  href="index.php"><i></i> Our Home</a>
 			<a href="adaptDog.php"><i></i>Adapt Me</a>
 			<a href="#"><i></i>Donate Us</a>
-			<?php echo $navAdmin;?>
 			<?php echo $navUser;?>
+			<?php echo $navAdmin;?>
 		</div> 
   	</nav>
     <!-- main -->
