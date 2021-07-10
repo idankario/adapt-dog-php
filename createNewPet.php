@@ -34,8 +34,8 @@
   	</nav>
 	<h1 class='text-center'>--Create a new dog--</h1>
 		<main class="c container mb-5">
-		<section class="p-5  justify-content-center">
-			<img  src='images/form.svg' alt="dog" title="dog">
+		<section class="p-5 align-items-center justify-content-center">
+			<img src='images/form.svg' alt="dog" title="dog">
 		</section>
 		<form action="#" method="post" class="main-form requires-validation">
 			<h2 class="text-center">ADAPT JOY</h2>
