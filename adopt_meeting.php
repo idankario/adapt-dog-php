@@ -41,20 +41,20 @@
 				echo '<img class="rounded-circle" alt='.$name.' title='.$name.' src='.$row['image_big'].'>';
 			?>
 		</section>
-		<form action="#" method="post" class="main-form requires-validation">
+		<form action="#" method="post" class="form-meeting requires-validation">
 			<h2 class="text-center"><?php echo$name; ?></h2>
 			<!-- Date -->
 			<div class="col-9">
 				<label type="text" >Date</label>
 				<input type="text"  name="Date" id="datepicker" value=<?php echo $Date;?> class="form-control" required>
-				<p class="invalid-feedback">Only two words with one space</p>
+				<p class="invalid-feedback">Only date format:dd-mm-yyyy</p>
 				<p class="valid-feedback">Looks good!</p>
 			</div>
 			<!-- Time -->
 			<div class="col-9">
 				<label class="form-label">Time</label>
 				<input type="time" name="Time" id="appt" value=<?php echo $Time;?> required class="form-control" > 
-				<p class="invalid-feedback">Only two words with one space</p>
+				<p class="invalid-feedback">We are open from 08:00 to 21:00</p>
 				<p class="valid-feedback">Looks good!</p>
 			</div>
 			<!-- Price -->
@@ -92,9 +92,9 @@
   <script src="https://kit.fontawesome.com/64d58efce2.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-  <script src="./js/constructValidation.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="./js/constructValidation.js"></script>
   <script src="js/date.js"></script>
   <script src="js/app.js"></script>
 </body>

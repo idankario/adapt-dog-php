@@ -37,7 +37,7 @@
 		<section class="p-5 align-items-center justify-content-center">
 			<img src='images/form.svg' alt="dog" title="dog">
 		</section>
-		<form action="#" method="post" class="main-form requires-validation">
+		<form action="#" method="post" class="form-pet requires-validation">
 			<h2 class="text-center">ADOPT JOY</h2>
 			<!-- Full Name -->
 			<div class="col-9">
@@ -49,7 +49,6 @@
 			<!-- Type -->
 			<div class="col-9">
 				<label class="form-label">Type</label>
-
 				<input type="text" value="<?php echo $dog_type;?>" name="dog_type" class="form-control" required>
 				<p class="invalid-feedback">Only two words with one space</p>
 				<p class="valid-feedback">Looks good!</p>

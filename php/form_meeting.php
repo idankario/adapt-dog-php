@@ -2,7 +2,6 @@
   //Checke if state is in post or get or just put null value
   $State_set=$_POST["State"]?? null;
   $id_meeting=$_GET["id"]?? null;   
-  $id_meeting=(1<0)? 1,:0
   if(!$UserId)
     header('signIn_signUp.php');  
   if($State||$State_set){  

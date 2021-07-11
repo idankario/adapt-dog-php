@@ -51,23 +51,27 @@
         </div>   
         <input type="submit" value="Login" class="px-4 py-2 btn btn-primary rounded-pill" />
       </form>
-      <form action="#" method="post" class="sign-up invisible d-none">
+      <form action="#" method="post" class="sign-up invisible d-none requires-validation">
         <h2 >Sign up</h2>
-        <div class="input-field">
+        <div class="input-field d-lg-flex">
           <i class="fas fa-user"></i>
-          <input type="text" name="username"  placeholder="User Name" />
+          <input type="text" name="username"  placeholder="User Name" required/>
+          <p class="invalid-feedback">Only two words with one space</p>
+				  <p class="valid-feedback">Looks good!</p>
         </div>
         <div class="input-field">
-          <i class="fas fa-envelope"></i>
-          <input type="email" name="email"  placeholder="Email" />
+          <i class="fas fa-envelope"></i>  
+          <input type="email" name="email"  placeholder="Email" required/>
         </div>
-        <div class="input-field">
-          <i class="fas fa-lock"></i>
-          <input type="password" name="password" placeholder="Password" />
+        <div class="input-field d-lg-flex">
+          <i class="fas fa-lock"></i> 
+          <input type="password" name="password" placeholder="Password" required/>
+          <p class="invalid-feedback">Password length 8 char one num and char</p>
+				  <p class="valid-feedback">Looks good!</p>
         </div> 
         <div class="input-field">
-          <i class="fas fa-phone"></i>
-          <input type="tel" name="phone" placeholder="Phone Number" />
+          <i class="fas fa-phone"></i> 
+          <input type="tel" name="phone" placeholder="Phone Number"/>
         </div>
         <input type="submit" class="px-4 py-2 btn btn-primary rounded-pill" value="Sign up" />
       </form>
@@ -112,5 +116,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/64d58efce2.js"></script>
+    <script src="./js/constructValidation.js"></script>
   </body>
 </html>
