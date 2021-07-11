@@ -1,8 +1,8 @@
 <?php
   //Checke if state is in post or get or just put null value
-  $State=$_GET["State"]?? null;
   $State_set=$_POST["State"]?? null;
   $id_meeting=$_GET["id"]?? null;   
+  $id_meeting=(1<0)? 1,:0
   if(!$UserId)
     header('signIn_signUp.php');  
   if($State||$State_set){  
@@ -12,14 +12,12 @@
       $query = "Update Adopter_list_220 SET status_meeting='Complete' WHERE id='$id_meeting'";
     elseif($State=='Cancel'&&$id_meeting)
       $query = "Update Adopter_list_220 SET status_meeting='Cancel' WHERE id='$id_meeting'";
-    else
-    {
+    else{
       $Date= $_POST["Date"]?? null;
       $Time=$_POST["Time"]?? null;
       $price=$_POST["price"]?? null;
       $DogId=$_POST["DogId"]?? null;
       if($Date&&$Time&&$price&&$UserId&&$DogId){ 
-      
         $newDate = date("Y-m-d", strtotime($Date));
         if($id_meeting)
           $query = "Update Adopter_list_220 set 
@@ -33,10 +31,9 @@
     if(!$result) 
       die("DB query failed");
     header('Location: meeting.php'); 
-  }else{
+    }else{
     $DogId=$_GET["DogId"]?? null;
-    if($DogId)
-    {
+    if($DogId){
       $Date=$_GET["date_meeting"]?? date("d-m-20y", strtotime("+2 day"));
       $Time=$_GET["time_meeting"]?? "08:00";
       $query 	= "SELECT * FROM dogs_220 where dog_id=".$DogId;

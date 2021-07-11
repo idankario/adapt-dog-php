@@ -12,7 +12,6 @@ const createSlider=()=> {
 	$.getJSON("data/slider.json", (data)=>{
 	let pagination = $( ".slider-pagi" ),slider=$('.slider'),i=0
 	$.each(data.slider, function(i, d) {
-		console.log(d.p)
 		let h2 = d.h2,
 		p = d.p,	
 		href = d.href,

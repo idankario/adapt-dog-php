@@ -10,8 +10,7 @@ const createPetsAndFilter=()=> {
 		ages = "",
 		sizes = "",
 		types = "";
-	$( "#products a" ).each(function(){
-	
+	$("#products a").each(function(){
 		let gender = $(this).data("gender"),	
 			age = $(this).data("age"),
 			size = $(this).data("size"),
@@ -33,6 +32,7 @@ const createPetsAndFilter=()=> {
 			types += "<option value='" + type + "'>" + type + "</option>";
 		}
 	});
+	//Add list of option to filter
 	$(".filter-gender").append(genders);
 	$(".filter-age").append(ages);
 	$(".filter-size").append(sizes);
@@ -51,8 +51,7 @@ const createFilter=()=> {
 				age = $(this).data("age").toLowerCase(),
 				type = $(this).data("type").toLowerCase();
 				size = $(this).data("size").toLowerCase();
-				name = $(this).data("name").toLowerCase();
-			if (gender.indexOf(query) > -1 ||  name.indexOf(query) > -1||  type.indexOf(query) > -1  ||age.indexOf(query) > -1  || size.indexOf(query) > -1) {
+			if (gender.indexOf(query) > -1 || type.indexOf(query) > -1  ||age.indexOf(query) > -1  || size.indexOf(query) > -1) {
 				$(this).show();
 			}
 		});

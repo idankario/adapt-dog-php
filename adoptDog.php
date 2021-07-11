@@ -14,10 +14,12 @@
 	//get data from DB
 	$query = "SELECT * FROM dogs_220";
 	$dogs = mysqli_query($connection, $query); 
+	if(!$dogs)
+		die("Error with db")
 ?>
 <body >
   	<!-- nav -->
-	  <nav class="navbar navbar-expand-lg navbar-dark ">
+	<nav class="navbar navbar-expand-lg navbar-dark ">
 		<button class="navbar-toggler mb-2 " type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>

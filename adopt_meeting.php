@@ -12,7 +12,7 @@
 	</head>
 	<?php 
 		include 'php/connection.php';
-		include 'php/form_metting.php';
+		include 'php/form_meeting.php';
 	?>
 <body>   
   	<!-- nav -->
@@ -35,7 +35,8 @@
   	</nav>
 	<h1 class='text-center'>--Adopt Friend--</h1>
 	<main class="c container mb-5">
-		<section class="p-5  justify-content-center">
+		
+		<section class="p-5 align-items-center justify-content-center">
 			<?php 
 				echo '<img class="rounded-circle" alt='.$name.' title='.$name.' src='.$row['image_big'].'>';
 			?>
