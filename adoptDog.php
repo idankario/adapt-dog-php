@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-	<link rel="icon" href="images/adapt.png">
+	<link rel="icon" href="images/adopt.png">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Bootstrap CSS -->
@@ -28,7 +28,7 @@
 		<?php echo $profile_nav;?>
 		<div class="collapse navbar-collapse navIcon"  id="navbarText" >
 			<a  href="index.php"><i></i> Our Home</a>
-			<a href="#" id="currentWeb"><i></i>Adapt Me</a>
+			<a href="#" id="currentWeb"><i></i>Adopt Me</a>
 			<a href="#"><i></i>Donate Us</a>
 			<?php echo $navUser;?>
 			<?php echo $navAdmin;?>
@@ -61,7 +61,7 @@
 			<input class="form-control n" type="text" placeholder="Search" />
 			<button type="submit" class="btn btn-block btn-primary">Search</button>
 		</form>	
-		<!-- dog to adapt -->
+		<!-- dog to adopt -->
 		<section class="flex-wrap justify-content-center" id="products">
 		<?php
 			foreach ($dogs as $key => $row) {

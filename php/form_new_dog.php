@@ -10,7 +10,7 @@
             $result = mysqli_query($connection, $query);
             if(!$result) 
                 die("DB query failed to delete");
-            header('Location: adaptDog.php'); 
+            header('Location: adoptDog.php'); 
         }
         $dog_name= $_POST["dog_name"]?? null;
         $gender=$_POST["gender"]?? null;
@@ -25,7 +25,7 @@
             $result = mysqli_query($connection, $query);
             if(!$result) 
                 die("DB query failed1");
-            header('Location: adaptDog.php'); 	
+            header('Location: adoptDog.php'); 	
         }
     }else{
         if($DogId){

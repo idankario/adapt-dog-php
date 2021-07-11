@@ -9,16 +9,16 @@
                 d.dog_name as dog_name,d.gender as gender,d.image_big as img,d.size as size,
                 d.dog_type as dog_type,d.age as age,d.dog_id as dog_id,u.name as user_name,
                 u.email as email,u.phone as phone
-                FROM Adapter_list_220  al
+                FROM Adopter_list_220  al
                 INNER JOIN dogs_220 d ON d.dog_id = al.dog_id  
                 INNER JOIN users_220 u ON u.user_id = al.user_id          
                 where al.user_id=".$UserId." OR ".$isAdmin." AND al.status_meeting='process'
                 ORDER BY time_meeting , datemeeting DESC";
-        $meetting = mysqli_query($connection, $query);
-        if(!($meetting)) 
+        $meeting = mysqli_query($connection, $query);
+        if(!($meeting)) 
             die("DB query failed.");
-        if (mysqli_num_rows($meetting)==0)
-            header('Location: adapt_meeting.php'); 
+        if (mysqli_num_rows($meeting)==0)
+            header('Location: adopt_meeting.php'); 
     }else{
         header('Location: signIn_signUp.php'); 
     }

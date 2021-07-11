@@ -7,11 +7,11 @@
     header('signIn_signUp.php');  
   if($State||$State_set){  
     if($State=='Delete'&&$id_meeting)
-      $query = "DELETE FROM Adapter_list_220 WHERE id='$id_meeting'";
+      $query = "DELETE FROM Adopter_list_220 WHERE id='$id_meeting'";
     elseif($State=='Complete'&&$id_meeting)
-      $query = "Update Adapter_list_220 SET status_meeting='Complete' WHERE id='$id_meeting'";
+      $query = "Update Adopter_list_220 SET status_meeting='Complete' WHERE id='$id_meeting'";
     elseif($State=='Cancel'&&$id_meeting)
-      $query = "Update Adapter_list_220 SET status_meeting='Cancel' WHERE id='$id_meeting'";
+      $query = "Update Adopter_list_220 SET status_meeting='Cancel' WHERE id='$id_meeting'";
     else
     {
       $Date= $_POST["Date"]?? null;
@@ -22,10 +22,10 @@
       
         $newDate = date("Y-m-d", strtotime($Date));
         if($id_meeting)
-          $query = "Update Adapter_list_220 set 
+          $query = "Update Adopter_list_220 set 
                     dog_id='$DogId', date_meeting='$newDate', time_meeting='$Time', price='$price' where id='$id_meeting'";
         else
-          $query= "insert into Adapter_list_220(user_id,dog_id,date_meeting,time_meeting,price)
+          $query= "insert into Adopter_list_220(user_id,dog_id,date_meeting,time_meeting,price)
                 values('$UserId',' $DogId','$newDate','$Time','$price')";
       }
     }
@@ -46,7 +46,7 @@
       }
     }
     else{
-      header('Location: adaptDog.php'); 
+      header('Location: adoptDog.php'); 
     }
     $name= $row['dog_name'];
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-	<link rel="icon" href="images/adapt.png">
+	<link rel="icon" href="images/adopt.png">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Bootstrap CSS -->
@@ -21,7 +21,7 @@
 			else die("DB query failed.");
 		}
 		else{
-			header('Location: adaptDog.php'); 
+			header('Location: adoptDog.php'); 
 		}
 		if($UserId){
 			if($UserRole=='Admin'){
@@ -31,14 +31,14 @@
 						'" type="button"><i class="far fa-trash-alt"></i> Delete</button>';	
 			}
 			else{
-				$button='<button onclick=location.href="adapt_meeting.php?DogId='.$DogId.
-						'" type="button"><i class="fas fa-paw"></i>adapt</button>';
+				$button='<button onclick=location.href="adopt_meeting.php?DogId='.$DogId.
+						'" type="button"><i class="fas fa-paw"></i>adopt</button>';
 			}
 		}
 		else{
-			$Parameters='?DogId='.$DogId.'&page=adapt_meeting.php';
-			$AdaptMeetting=' onclick=location.href="signIn_signUp.php'.$Parameters.'DogId='.$DogId.'"';
-			$button='<button'.$AdaptMeetting.' type="button"><i class="fas fa-paw"></i>adapt</button>';
+			$Parameters='?DogId='.$DogId.'&page=adopt_meeting.php';
+			$AdoptMeeting=' onclick=location.href="signIn_signUp.php'.$Parameters.'DogId='.$DogId.'"';
+			$button='<button'.$AdoptMeeting.' type="button"><i class="fas fa-paw"></i>adopt</button>';
 		}
 	?>
 </head>
@@ -55,7 +55,7 @@
 		<?php echo $profile_nav;?>
 		<div class="collapse navbar-collapse navIcon"  id="navbarText" >
 			<a  href="index.php"><i></i> Our Home</a>
-			<a href="adaptDog.php"><i></i>Adapt Me</a>
+			<a href="adoptDog.php"><i></i>Adopt Me</a>
 			<a href="#"><i></i>Donate Us</a>
 			<?php echo $navUser;?>
 			<?php echo $navAdmin;?>

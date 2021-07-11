@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-	<link rel="icon" href="images/adapt.png">
+	<link rel="icon" href="images/adopt.png">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Bootstrap CSS -->
@@ -10,7 +10,7 @@
 	<title>Edit Dog</title>
 	<?php
 		include 'php/connection.php';
-		include 'php/create_meetting_list.php';
+		include 'php/create_meeting_list.php';
 	?>
 </head>
 <body >
@@ -26,9 +26,9 @@
 		<?php echo $profile_nav;?>
 		<div class="collapse navbar-collapse navIcon"  id="navbarText" >
 			<a  href="index.php"><i></i> Our Home</a>
-			<a href="adaptDog.php"><i></i>Adapt Me</a>
+			<a href="adoptDog.php"><i></i>Adopt Me</a>
 			<a href="#"><i></i>Donate Us</a>
-			<?php  if($navUser)echo'<a href="#" id="currentWeb"><i></i>Meetting Pet</a>';?>
+			<?php  if($navUser)echo'<a href="#" id="currentWeb"><i></i>Meeting Pet</a>';?>
 			<?php echo $navAdmin;?>
 		</div> 
   	</nav>
@@ -40,14 +40,14 @@
         <article class="d-flex flex-center align-items-center flex-row flex-wrap">		
 		<?php	
 		
-            foreach ($meetting as $key => $row) {
+            foreach ($meeting as $key => $row) {
                 $name= $row['dog_name']??null;
 				$detalis=null;
 				$phnoe="";
 				if($row['phone'])
 					$phnoe='<p>phone: '.$row['phone'].'</p>';
 				if($isAdmin)
-					$detalis='<h5 >Meetting with: '.$row['user_name'].'</h5>
+					$detalis='<h5 >Meeting with: '.$row['user_name'].'</h5>
 					<p>email: '.$row['email'].'</p>'
 					.$phnoe;	
             echo'<article class="d-inline flex-center align-items-center text-center text-dark m-3">'.$detalis.'
@@ -64,11 +64,11 @@
 					</div>
 					<div class="w-75 m-3 text-center">';
 						if($UserRole=='Admin')
-							echo'<button onclick=location.href="adapt_meeting.php?State=Complete&id='.$row['id'].'" type="button"><i class="fas fa-pen"></i>Complete</button>
-							<button onclick=location.href="adapt_meeting.php?State=Cancel&id='.$row['id'].'" type="button"><i class="fas fa-pen"></i>Cancel</button>';
+							echo'<button onclick=location.href="adopt_meeting.php?State=Complete&id='.$row['id'].'" type="button"><i class="fas fa-pen"></i>Complete</button>
+							<button onclick=location.href="adopt_meeting.php?State=Cancel&id='.$row['id'].'" type="button"><i class="fas fa-pen"></i>Cancel</button>';
 						else
-							echo'<button onclick=location.href="adapt_meeting.php?DogId='.$row['dog_id'].'&id='.$row['id'].'&date_meeting='.$row['datemeeting'].'&time_meeting='.$row['time_meeting'].'" class="m-2" type="button"><i class="fas fa-pen"></i> Edit</button>
-							<button onclick=location.href="adapt_meeting.php?State=Delete&id='.$row['id'].'" type="button"><i class="far fa-trash-alt"></i> Delete</button>';
+							echo'<button onclick=location.href="adopt_meeting.php?DogId='.$row['dog_id'].'&id='.$row['id'].'&date_meeting='.$row['datemeeting'].'&time_meeting='.$row['time_meeting'].'" class="m-2" type="button"><i class="fas fa-pen"></i> Edit</button>
+							<button onclick=location.href="adopt_meeting.php?State=Delete&id='.$row['id'].'" type="button"><i class="far fa-trash-alt"></i> Delete</button>';
 						
 						echo'</div>
             	</article>';

@@ -2,13 +2,13 @@
 
 <html lang="en-US" >
 <head>
-	<link rel="icon" href="images/adapt.png">
+	<link rel="icon" href="images/adopt.png">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Bootstrap CSS -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">	<link rel="stylesheet"  href="./css/style.css" type="text/css" media="all">
 	<link rel = "stylesheet" href="css/style.css">
-	<title>Adapt Joy Home Page</title>
+	<title>Adopt Joy Home Page</title>
 </head>
 <?php
     include 'php/connection.php';
@@ -26,7 +26,7 @@
 		<?php echo $profile_nav;?>
 		<div class="collapse navbar-collapse navIcon"  id="navbarText" >
 			<a  href="#" id="currentWeb"><i></i> Our Home</a>
-			<a href="adaptDog.php"><i></i>Adapt Me</a>
+			<a href="adoptDog.php"><i></i>Adopt Me</a>
 			<a href="#"><i></i>Donate Us</a>
 			<?php echo $navUser;?>
 			<?php echo $navAdmin;?>
@@ -50,7 +50,7 @@
 		<h1>---OUR SERVICES---</h1>	
 		<section class='box flex-wrap'>
 			<section>
-				<h3><i></i>Adapt dog</h3>
+				<h3><i></i>Adopt dog</h3>
 				<p>Our software is made so you can access and manage your budget and expenses online at any time from any device. It provides detailed income and expense reports with graphs so you can easilly see your spending patterns and budget at a glance. Read below to find out more.</p>
 			</section>
 			<section>

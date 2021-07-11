@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-		<link rel="icon" href="images/adapt.png">
+		<link rel="icon" href="images/adopt.png">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- Bootstrap CSS -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">	<link rel="stylesheet"  href="./css/style.css" type="text/css" media="all">
 		<link rel = "stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-		<title>Adapt femaily dogs</title>
+		<title>Adopt femaily dogs</title>
 	</head>
 	<?php 
 		include 'php/connection.php';
@@ -27,13 +27,13 @@
 		<?php echo $profile_nav;?>
 		<div class="collapse navbar-collapse navIcon"  id="navbarText" >
 			<a  href="index.php"><i></i> Our Home</a>
-			<a href="adaptDog.php"><i></i>Adapt Me</a>
+			<a href="adoptDog.php"><i></i>Adopt Me</a>
 			<a href="#"><i></i>Donate Us</a>
 			<?php echo $navUser;?>
 			<?php echo $navAdmin;?>
 		</div> 
   	</nav>
-	<h1 class='text-center'>--Adapt Friend--</h1>
+	<h1 class='text-center'>--Adopt Friend--</h1>
 	<main class="c container mb-5">
 		<section class="p-5  justify-content-center">
 			<?php 
@@ -68,7 +68,7 @@
 			<input type="hidden" name="State" value="Set">
 			<section class="justify-content-center mt-5">
 				<button type="submit"><i class="fas fa-paw " aria-hidden="true"></i>
-					<?php if($id_meeting) echo 'Update'; else echo'Adapt me'; $UserId;?> 
+					<?php if($id_meeting) echo 'Update'; else echo'Adopt me'; $UserId;?> 
 				</button>
 			</section>
 		</form>

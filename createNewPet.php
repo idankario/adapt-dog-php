@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-		<link rel="icon" href="images/adapt.png">
+		<link rel="icon" href="images/adopt.png">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- Bootstrap CSS -->
@@ -26,7 +26,7 @@
 		<?php echo $profile_nav;?>
 		<div class="collapse navbar-collapse navIcon"  id="navbarText" >
 			<a  href="index.php"><i></i> Our Home</a>
-			<a href="adaptDog.php"><i></i>Adapt Me</a>
+			<a href="adoptDog.php"><i></i>Adopt Me</a>
 			<a href="#"><i></i>Donate Us</a>
 			<?php echo $navUser;?>
 			<a href="#" id="currentWeb"><i></i>Add Pet</a>
@@ -38,7 +38,7 @@
 			<img src='images/form.svg' alt="dog" title="dog">
 		</section>
 		<form action="#" method="post" class="main-form requires-validation">
-			<h2 class="text-center">ADAPT JOY</h2>
+			<h2 class="text-center">ADOPT JOY</h2>
 			<!-- Full Name -->
 			<div class="col-9">
 				<label class="form-label">Name Puppie</label>
