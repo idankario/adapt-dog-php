@@ -59,7 +59,7 @@
           <p class="invalid-feedback">Only two words with one space</p>
 				  <p class="valid-feedback">Looks good!</p>
         </div>
-        <div class="input-field">
+        <div class="input-field d-lg-flex">
           <i class="fas fa-envelope"></i>  
           <input type="email" name="email"  placeholder="Email" required/>
         </div>
@@ -69,7 +69,7 @@
           <p class="invalid-feedback">Password length 8 char one num and char</p>
 				  <p class="valid-feedback">Looks good!</p>
         </div> 
-        <div class="input-field">
+        <div class="input-field d-lg-flex">
           <i class="fas fa-phone"></i> 
           <input type="tel" name="phone" placeholder="Phone Number"/>
         </div>

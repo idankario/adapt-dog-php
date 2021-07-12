@@ -31,9 +31,10 @@
       $email=$_POST["email"];
       $query  =  "SELECT * FROM users_220 WHERE email='".$email;
       $result = mysqli_query($connection , $query);
-      if(($result)) {
-        $message1 = "User alredy exsist";
+      if(!empty($result)) {
+        $message = "User alredy exsist";
       }else{
+        $message = "";
         $query  =  "insert into users_220(email,pass,name,phone)values('$email',' $password','$username','$phone')";
         $result = mysqli_query($connection , $query);
       }
