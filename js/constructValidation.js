@@ -53,7 +53,10 @@ const formValidations = () => {
 	window.addEventListener('load',() => {   
 		//length of all input we need to check in regex
 		length=2
-		if ($(".form-meeting")[0]) {
+		if($(".sign-in")[0]) {
+			return;
+		}
+		else if ($(".form-meeting")[0]) {
 			const dateL =  document.querySelector('[name=Date]');
 			const timeL =  document.querySelector('[name=Time]');
 			if(dateL.value){
@@ -89,9 +92,6 @@ const formValidations = () => {
 			Password.onchange = (e) => {
 				constructpass(e.target)
 			};
-		}
-		else if($(".sign-in")[0]) {
-			return;
 		}
 		$('form').submit(function(e) {
 			if(($('.is-valid').length)<length) {

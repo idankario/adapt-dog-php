@@ -7,7 +7,7 @@
               . "' and pass = '"
               . $password
               ."'";
-     
+    
       $result = mysqli_query($connection , $query);
       //To get all details to session 
       $row    = mysqli_fetch_array($result);
